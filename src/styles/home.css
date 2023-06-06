@@ -1,25 +1,41 @@
+/*Home Page Body*/
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Arial', serif;
+}
+
 /*PROFILE PICTURE*/
 .profile-position {
     position: absolute;
-    top: 33.33%;
+    top: 40%;
     left: 66.66%;
     transform: translate(-50%, -50%);
     width: 200px;
     height: 200px;
     display: flex;
+    z-index: -9999;
 }
   
 .profile-animation {
   object-fit: cover;
   border-radius: 50%;
-  animation: text-fade-in 1.5s;
+  border: 4px solid white;
+  animation: pic-fade-in 1.6s;
 }
 
-/*animation*/
+/*animation for My Name & Paragraph*/
 @keyframes slide-in {
     from {
       opacity: 0;
-      transform: translateY(50%);
+      transform: translateY(150%);
     }
     to {
       opacity: 1;
@@ -27,10 +43,11 @@
     }
 }
 
+/*animation for Above Name */
 @keyframes slide-in-slow {
   from {
     opacity: 0;
-    transform: translateY(25%);
+    transform: translateY(100%);
   }
   to {
     opacity: 1;
@@ -48,7 +65,7 @@
   font-family: "Outfit", Arial, sans-serif;
   position: absolute;
   text-align: justify;
-  top: 25%;
+  top: 40%;
   left: 40%;
   transition: font-size 0.5s;
   transform: scale(0.8); 
@@ -80,7 +97,7 @@
   transform: translate(-50%, -50%);
 }
 
-@keyframes text-fade-in {
+@keyframes pic-fade-in {
   from {
     opacity: 0;
     transform: scale(0.8);

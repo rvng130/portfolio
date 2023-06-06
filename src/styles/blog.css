@@ -1,10 +1,118 @@
-.content-container {
-display: flex;
-align-items: center;
-}
+.blog-page {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: darkblue;
+  }
+  
+  .rectangle-container {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .black-rectangle {
+    flex: 2;
+    background-color: black;
+    transform: translateY(0%);
+    transition: transform 2s ease;
+  }
+  
+  .beige-rectangle {
+    flex: 3;
+    background-color: beige;
+    transform: translateY(0%);
+    transition: transform 2s ease;
+  }
+  
+  .reveal .black-rectangle {
+    transform: translateY(-100%);
+  }
+  
+  .reveal .beige-rectangle {
+    transform: translateY(100%);
+  }
+  
+  /*LIST ON SITE*/
+  .link-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%) rotate(75deg);
+    transform-origin: top right;
+    transition: transform 0.3s ease;
+  }
+  
+  .link-list:hover {
+    transform: translateX(0) rotate(75deg);
+  }
+  
+  .link-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .link-list li {
+    margin-bottom: 10px;
+  }
+  
+  .link-list a {
+    display: block;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    transform: skew(-15deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .link-list a:hover {
+    transform: skew(-15deg) scale(1.1);
+  }
 
-.text-section {
-flex: 3;
+  .link-item {
+    margin-bottom: 10px;
+  }
+  
+  .link-item a {
+    position: relative;
+    display: block;
+    color: #ffffff;
+    font-size: px;
+    font-weight: bold;
+    text-decoration: none;
+    transform: skew(-15deg);
+    transition: all 0.3s ease;
+    
+  }
+  
+  .link-item:hover a {
+    font-size: 22px;
+    transform: skew(-15deg) scale(1.2);
+  }
 
-padding: 20px;
-}
+
+
+/*
+
+
+
+Black and Beige vertical color rectangle 2/5 and 3/5 of screen respectively
+one slides up while the other slides down out of sight to reveal a dark blue site where
+There is a list of clickable links on the right where they are stacked on the side
+in a slanted sort of 75 degree angle, the text is also slanted/distorted. When hovered upon they expand.
+
+When a text from the list is selected, it represents
+which post you want to look atand once selected, 
+the same black and beige doors come back down in like sliding doors 
+(one from the top and one from the bottom) and 
+reveal a photo on the left and text on the right that fades in.
+Top right corver there will be an X with animation when hovered above.
+click it and black and beige sliding doors will open again (one goes up, the other slides down),
+ image and text slides away.
+
+*/
