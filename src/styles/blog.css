@@ -1,0 +1,10 @@
+.content-container {
+display: flex;
+align-items: center;
+}
+
+.text-section {
+flex: 3;
+
+padding: 20px;
+}

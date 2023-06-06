@@ -1,0 +1,98 @@
+/*PROFILE PICTURE*/
+.profile-position {
+    position: absolute;
+    top: 33.33%;
+    left: 66.66%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    display: flex;
+}
+  
+.profile-animation {
+  object-fit: cover;
+  border-radius: 50%;
+  animation: text-fade-in 1.5s;
+}
+
+/*animation*/
+@keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+
+@keyframes slide-in-slow {
+  from {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+    
+/*TEXT FORMATTTING!! !! !*/
+@font-face {
+  font-family: 'Outfit';
+  src: url('../fonts/Outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+}
+
+.text-section {
+  font-family: "Outfit", Arial, sans-serif;
+  position: absolute;
+  text-align: justify;
+  top: 25%;
+  left: 40%;
+  transition: font-size 0.5s;
+  transform: scale(0.8); 
+  
+  transform: translate(-50%, -50%);
+}
+
+.above-name {
+  font-size: 18px;
+  margin-top: 10px; 
+  margin-bottom: 10px;
+  animation: slide-in-slow 1s ease forwards; 
+}
+
+.name {
+  font-size: 48px;
+  margin-top: 10px; 
+  margin-bottom: 10px; 
+  animation: slide-in 1s ease forwards;
+}
+
+.description {
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 14px;
+  text-align: justify;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes text-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .text-section {
+    /* do later for phone screens */
+  }
+}
