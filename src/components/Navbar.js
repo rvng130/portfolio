@@ -8,13 +8,16 @@ function Navbar() {
           <NavLink exact to="/" activeClassName="active">Home</NavLink>
         </li>
         <li className="navbar-item">
-          <NavLink to="/blog" activeClassName="active">Blog</NavLink>
+          <NavLink to="/skills" activeClassName="active">Skills</NavLink>
         </li>
         <li className="navbar-item">
-          <NavLink to="/game" activeClassName="active">Game</NavLink>
+          <NavLink to="/projects" activeClassName="active">Projects</NavLink>
         </li>
         <li className="navbar-item">
           <NavLink to="/about" activeClassName="active">About</NavLink>
+        </li>
+        <li className="navbar-item">
+          <NavLink to="/mystery" activeClassName="active">???</NavLink>
         </li>
       </ul>
     </nav>

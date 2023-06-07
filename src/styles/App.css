@@ -2,7 +2,7 @@
 
 /*Navigation Bar Position*/
 .navbar {
-  background: linear-gradient(to bottom, rgb(3, 163, 255), rgba(87, 174, 255, 0.769));
+  background: linear-gradient(to bottom,#c2c2c2, #c2c2c296);
   position: fixed;
   top: 0;
   width: 100%;

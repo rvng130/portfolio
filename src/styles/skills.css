@@ -1,0 +1,128 @@
+.blog-page {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #272733
+  }
+  
+  .rectangle-container {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+    ;
+  }
+  
+  .black-rectangle {
+    flex: 2;
+    background-color: #bf7560;
+    transform: translateY(0%);
+    transition: transform 1s ease;
+    z-index: 9998
+  }
+  
+  .beige-rectangle {
+    flex: 3;
+    background-color: #f9f8e7;
+    transform: translateY(0%);
+    transition: transform 1s ease;
+    z-index: 9998
+  }
+  
+  .reveal .black-rectangle {
+    transform: translateY(-100%);
+  }
+  
+  .reveal .beige-rectangle {
+    transform: translateY(100%);
+  }
+  
+ 
+
+  /*LIST ON SITE*/
+  .link-list {
+    font-family: "Outfitblack", Arial, sans-serif;
+    text-align: right;
+    top: 100px;
+    right: 20px;
+    position: absolute;    
+    transform-origin: top right;
+    transition: transform 0.3s ease;
+    
+    
+  }
+  
+  .link-list:hover {
+    
+  }
+  
+  .link-item:hover{
+    transform: skew(10deg) scale(1);
+    transform: translateX(0) rotate(-4deg);
+  }
+  
+  .link-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .link-list li {
+    margin-bottom: 10px;
+  }
+  
+  .link-list a {
+    display: block;
+    padding: 5px;
+    color: #f3cfcf;
+    text-decoration: none;
+    transform: skew(-15deg);
+    font-size: 45px;
+    transition: transform 0.3s ease;
+
+  }
+  
+  .link-list a:hover {
+    
+  }
+
+
+  @font-face {
+    font-family: 'Outfitblack';
+    src: url('../fonts/Outfit/Outfit-ExtraBold.ttf') format('truetype');
+  }
+  
+  
+
+/*
+When you leave a page, the rectangles should come sliding in, then the rectangles stay there a moment
+then they slide out
+
+
+Black and Beige vertical color rectangle 2/5 and 3/5 of screen respectively
+one slides up while the other slides down out of sight to reveal a dark blue site where
+There is a list of clickable links on the right where they are stacked on the side
+in a slanted sort of 75 degree angle, the text is also slanted/distorted. When hovered upon they expand.
+
+When a text from the list is selected, it represents
+which post you want to look atand once selected, 
+the same black and beige doors come back down in like sliding doors 
+(one from the top and one from the bottom) and 
+reveal a photo on the left and text on the right that fades in.
+Top right corver there will be an X with animation when hovered above.
+click it and black and beige sliding doors will open again (one goes up, the other slides down),
+ image and text slides away.
+
+for about/contact section
+this sound cloud
+isnt insta gram
+rvng git hub
+
+  1    3    0
+isnt.this.rvng
+this.rvng.isnt
+rvng.isnt.this
+*/
