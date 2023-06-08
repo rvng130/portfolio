@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("../images/bg.png");
+  background-image: url("../images/sky5.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   flex-direction: column;
@@ -10,6 +10,7 @@ body {
   justify-content: center;
   height: 100vh;
   font-family: 'Arial', serif;
+  
 }
 
 /*PROFILE PICTURE*/
@@ -113,3 +114,5 @@ body {
     /* do later for phone screens */
   }
 }
+
+
