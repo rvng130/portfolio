@@ -1,2 +1,1 @@
-This is my website portfolio ! 
-Thanks for checking it out !
+Files for my website portfolio 
