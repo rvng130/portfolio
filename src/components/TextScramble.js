@@ -59,13 +59,13 @@ const TextScrambleComponent = () => {
 
   useEffect(() => {
     const phrases = [
-      'This,',
-      'sooner or later',
-      "you're going to realize",
-      'just as I did',
-      "that there's a difference",
-      'between knowing the path',
-      'and walking the path',
+      'This',
+      'is',
+      "currently",
+      'under',
+      "construction",
+      'please',
+      'wait.',
     ];
 
     const el = textRef.current;

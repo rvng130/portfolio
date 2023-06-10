@@ -1,0 +1,124 @@
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 9999;
+    transition: color 0.3s ease;
+    color: rgb(0, 0, 0);
+  }
+
+/*hover me*/
+
+/*hover me not*/
+  
+  .menu-container {
+    position: relative;
+  }
+  
+  .rectangle-container {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .rectangle-container.reveal .black-rectangle {
+    transform: translateY(0%);
+  }
+  
+  .rectangle-container.reveal .beige-rectangle {
+    transform: translateY(0%);
+  }
+  
+  .black-rectangle {
+    flex: 2;
+    background-color: #000000;
+    transform: translateY(100%);
+    transition: transform 0.6s ease;
+    z-index: 9998;
+  }
+  
+  .beige-rectangle {
+    flex: 3;
+    background-color: #f9f8e7;
+    transform: translateY(-100%);
+    transition: transform 0.6s ease;
+    z-index: 9998;
+  }
+  
+
+  /*items*/
+  .menu-items {
+    position: fixed;
+    left: 41%;
+    font-size: 50px;
+    padding: 10px;
+    z-index: 9999;
+
+    top: 7%;
+    animation: slideInDown 0.5s ease;
+    }
+
+
+    .menu-item {
+      display: block;
+      margin-bottom: 40px;
+      text-decoration: none;
+      color:#000000;
+      transition: color 0.3s ease;
+      
+      }
+
+    .menu-items2 {
+      position: fixed;
+      right: 62%; 
+      font-size: 30px;
+      padding: 10px;
+      z-index: 9999;
+      bottom: 1%;
+      animation: slideInUp 0.5s ease;
+      justify-content: flex-start;
+    }
+    
+   
+    .menu-item2 {
+      display: block;
+      margin-bottom: 40px;
+      text-decoration: none;
+      color:#f9f8e7;
+      transition: color 0.3s ease;
+      
+      }
+    
+
+
+    @keyframes slideInUp {
+      0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    
+    /* Animation keyframes */
+    @keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    }
+
+    @keyframes slideOutUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+    }

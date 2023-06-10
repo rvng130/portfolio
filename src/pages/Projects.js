@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from 'react';
-
 function Projects() {
-    return (
-      <div>
+  return (
+      <div className="about-page">
         {/*Temp*/}
-        <h1>New Page</h1>
-        <p>Welcome to Projects!</p>
+        <h1>Working on it</h1>
+        <div className="container-about">
+          <div className="text-about"> Projects</div>
+        </div>
       </div>
     );
   }
-  
-  export default Projects;
+export default Projects;
+
+
+
+

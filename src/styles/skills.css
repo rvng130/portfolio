@@ -1,111 +1,159 @@
-.blog-page {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    background-color: #272733
+  /*font*/
+  @font-face {
+    font-family: 'Outfitblack';
+    src: url('../fonts/Outfit/Outfit-ExtraBold.ttf') format('truetype');
   }
   
-  .rectangle-container {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s ease;
-    ;
-  }
-  
-  .black-rectangle {
-    flex: 2;
-    background-color: #bf7560;
-    transform: translateY(0%);
-    transition: transform 1s ease;
-    z-index: 9998
-  }
-  
-  .beige-rectangle {
-    flex: 3;
-    background-color: #f9f8e7;
-    transform: translateY(0%);
-    transition: transform 1s ease;
-    z-index: 9998
-  }
-  
-  .reveal .black-rectangle {
-    transform: translateY(-100%);
-  }
-  
-  .reveal .beige-rectangle {
-    transform: translateY(100%);
-  }
-  
- 
+  /*first animation*/
+  @keyframes waterfall {
+    0% {
+      transform: skewY(0deg) translateY(100%) rotate3d(-0.5, -0.866, 0, -30deg) rotate(-2deg);
+    }
 
-  /*LIST ON SITE*/
+    100% {
+      transform: skewY(0deg);
+      
+    }
+  }
+
+  .link-list.animate-waterfall {
+    animation: waterfall 1s ease forwards;
+  }
+
+/*hover animation*/
+  .link-list a:hover {
+    transform: rotate3d(0,0,0,0deg) rotate(0deg);
+  }
+  
+/*LIST CSS*/
+  .link-list-container {
+    height: 300px; /* Adjust the height as needed */
+    overflow-y: auto
+  }
+
   .link-list {
     font-family: "Outfitblack", Arial, sans-serif;
-    text-align: right;
+    text-align: left;
     top: 100px;
     right: 20px;
-    position: absolute;    
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
     transform-origin: top right;
     transition: transform 0.3s ease;
-    
-    
-  }
-  
-  .link-list:hover {
-    
-  }
-  
-  .link-item:hover{
-    transform: skew(10deg) scale(1);
-    transform: translateX(0) rotate(-4deg);
+    max-height: calc(100vh - 100px); 
   }
   
   .link-list ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    
   }
   
   .link-list li {
-    margin-bottom: 10px;
+    margin-bottom: 1px;
   }
   
   .link-list a {
+    font-size: 100px;
     display: block;
     padding: 5px;
-    color: #f3cfcf;
+    color: #000000;
     text-decoration: none;
-    transform: skew(-15deg);
-    font-size: 45px;
-    transition: transform 0.3s ease;
-
-  }
-  
-  .link-list a:hover {
+    transform: rotate3d(-0.5, -0.866, 0, -30deg) rotate(-2deg);
+    box-shadow: 2em 4em 6em -2em rgba(0,0,0,.5), 1em 2em 3.5em -2.5em rgba(0,0,0,.5);
+    transition: transform .4s ease, box-shadow .4s ease;
+    border-radius: .5em;
     
-  }
-
-
-  @font-face {
-    font-family: 'Outfitblack';
-    src: url('../fonts/Outfit/Outfit-ExtraBold.ttf') format('truetype');
+/*Compatability*/
+  
+    
+    @media (max-width: 768px) {
+      font-size: 6vw; 
+    }
+  
+    @media (max-width: 480px) {
+      font-size: 4vw; 
+    }
   }
   
   
+
+/*Bottom Right*/
+
+.skills-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #ffffff7e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+}
+
+.skills-container h2 {
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.skills-container p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/*TEXTBOX COMIN IN*/
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+
+.selected-item-container {
+  position: relative;
+  width: 60%;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+  text-align: center;
+}
+
+.selected-item-container h2 {
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.selected-item-container p {
+  font-size: 16px;
+  margin: 0;
+}
+
+
 
 /*
-When you leave a page, the rectangles should come sliding in, then the rectangles stay there a moment
-then they slide out
+When one of the items from the list is clicked a container
+fades into view centered on the right half of the screen.
 
 
 Black and Beige vertical color rectangle 2/5 and 3/5 of screen respectively
 one slides up while the other slides down out of sight to reveal a dark blue site where
 There is a list of clickable links on the right where they are stacked on the side
 in a slanted sort of 75 degree angle, the text is also slanted/distorted. When hovered upon they expand.
+
+Change the css so that the items look slanted as if there were on a different plane
+As if the plane was angled as if the text was in 3d. Where the root of the angle is the right side.
+
+When I hover over an item in the list, 
 
 When a text from the list is selected, it represents
 which post you want to look atand once selected, 
@@ -126,3 +174,6 @@ isnt.this.rvng
 this.rvng.isnt
 rvng.isnt.this
 */
+
+
+
