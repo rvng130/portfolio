@@ -1,50 +1,56 @@
-/*Home Page Body*/
+/* Home Page Body */
 body {
   margin: 0;
   padding: 0;
-  background-image: url("../images/sky5.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: none; 
+  background-color: #ffffff;
+  background-size: 50%;
+  background-position: 100% 50%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   font-family: 'Arial', serif;
-  
 }
 
-/*PROFILE PICTURE*/
-.profile-position {
-    position: absolute;
-    top: 40%;
-    left: 66.66%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 200px;
-    display: flex;
-    z-index: -9999;
-}
-  
-.profile-animation {
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid white;
-  animation: pic-fade-in 1.6s;
+.drawing-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
 }
 
-/*animation for My Name & Paragraph*/
+.drawing-image {
+  max-width: 70%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: 75%; 
+  }
+}
+
+@media (min-width: 769px) {
+  body {
+    
+    background-size: auto 75%;
+  }
+}
+
+/* Animation for My Name */
 @keyframes slide-in {
-    from {
-      opacity: 0;
-      transform: translateY(150%);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0%);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
-/*animation for Above Name */
+/* Animation for Above Name */
 @keyframes slide-in-slow {
   from {
     opacity: 0;
@@ -55,8 +61,9 @@ body {
     transform: translateY(0%);
   }
 }
-    
-/*TEXT FORMATTTING!! !! !*/
+
+
+/* TEXT FORMATTING */
 @font-face {
   font-family: 'Outfit';
   src: url('../fonts/Outfit/Outfit-VariableFont_wght.ttf') format('truetype');
@@ -66,53 +73,46 @@ body {
   font-family: "Outfit", Arial, sans-serif;
   position: absolute;
   text-align: justify;
-  top: 40%;
-  left: 40%;
+  top: 35%;
+  left: 25%;
   transition: font-size 0.5s;
-  transform: scale(0.8); 
-  
+  transform: scale(0.8);
   transform: translate(-50%, -50%);
+  width: 30%;
+  height: 20%;
+  
 }
 
 .above-name {
   font-size: 18px;
-  margin-top: 10px; 
+  margin-top: 10px;
   margin-bottom: 10px;
-  animation: slide-in-slow 1s ease forwards; 
+  animation: slide-in-slow 1s ease forwards;
 }
 
 .name {
-  font-size: 48px;
-  margin-top: 10px; 
-  margin-bottom: 10px; 
+  font-size: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   animation: slide-in 1s ease forwards;
 }
 
-.description {
-  font-family: "Outfit", Arial, sans-serif;
+.text-section p {
   font-size: 14px;
-  text-align: justify;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+  margin-top: 10px;
+  margin-bottom: 10px;
+  animation: slide-in 1.2s ease forwards;
 
-@keyframes pic-fade-in {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 
 @media (max-width: 768px) {
   .text-section {
-    /* do later for phone screens */
+    /* Adjust styles for smaller screens */
   }
 }
 
-
+@media (max-width: 480px) {
+  .description {
+    font-size: 12px; /* Adjust font size for smaller screens if needed */
+  }
+}

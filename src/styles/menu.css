@@ -1,15 +1,56 @@
 .menu-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 9999;
-    transition: color 0.3s ease;
-    color: rgb(0, 0, 0);
-  }
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: color 0.3s ease;
+  color: rgb(0, 0, 0);
+  animation: slideInDown 1.6s;
+  text-decoration: none; /* Add this line */
+}
 
 /*hover me*/
+.menu-toggle::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  transition: width 0.3s ease; /* Adjust the transition duration as desired */
+}
+
+.menu-toggle:hover::after {
+  width: 100%; /* Expand the width to 100% on hover */
+}
+
+
+.menu-item::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: #000000;
+  transition: width 0.3s ease; /* Adjust the transition duration as desired */
+}
+
+.menu-item:hover::after {
+  width: 100%; /* Expand the width to 100% on hover */
+}
+
+.menu-item2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #f9f8e7;
+  transition: width 0.3s ease; /* Adjust the transition duration as desired */
+}
+
+.menu-item2:hover::after {
+  width: 100%; /* Expand the width to 100% on hover */
+}
 
 /*hover me not*/
   
@@ -122,3 +163,6 @@
         transform: translateY(-100%);
     }
     }
+
+
+

@@ -1,7 +1,7 @@
 const ProfilePicture = ({ altText }) => {
     return (
           <div className="profile-position">
-            <img className="profile-animation" src={require ("../images/image.jpg" )} alt={altText} />
+            <img className="profile-animation" src={require ("../images/me.png" )} alt={altText} />
           </div>
         );
       };

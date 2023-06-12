@@ -4,6 +4,7 @@ import BeigeRectangle from '../components/BeigeRectangle.js';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Overlay from "../components/Overlay.js";
+import Drawing2 from '../components/Drawing2';
 
 function Skills() {
   const [showOverlay, setShowOverlay] = useState(false);
@@ -59,7 +60,12 @@ function Skills() {
           
         </ul>
    </div>
+
+   <div class="skills-container"><Drawing2 /></div>
+   
+  
    <div class="skills-container">
+    
   <h2>Skills</h2>
   <p>The flow of learning never ends.</p>
 </div>
@@ -72,6 +78,9 @@ function Skills() {
           </div>
         </Overlay>
       )}
+
+
+
 
    </div>
   );

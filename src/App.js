@@ -6,14 +6,19 @@ import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import About from './pages/About';
 import Question from './pages/Question';
+import LogoPicture from './components/Logo';
 
 import './styles/App.css';
 //Under Everything Else
 function App() {
 
+
+
   
   return (
     <Router>
+      
+      <LogoPicture altText="Logo Picture" />
       <Menu />
       <Routes>
         <Route path="/" element={<Home />} />
