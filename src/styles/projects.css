@@ -4,3 +4,12 @@
     overflow: hidden;
     background-color: #ffffff
   }
+
+  /*
+  Make a 3d rotating cube that floats in the middle of the screen. 
+  Pressing the arrow keys rotates the cube to a new side depending on which direction is pressed.
+  On each side of the cube put a clickable link on it, only displaying the link
+  of which the side of the cube is facing the viewer. 
+  
+  
+  */

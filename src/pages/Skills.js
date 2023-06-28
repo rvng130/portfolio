@@ -30,6 +30,10 @@ function Skills() {
         <ul>
           
         <li className="link-item">
+            <a href="#" onClick={() => handleItemClick('09 Relevant Classes')}>09 REL. CLASS</a>
+          </li>
+
+        <li className="link-item">
             <a href="#" onClick={() => handleItemClick('07 JAVA')}>07 JAVA</a>
           </li>
           <li className="link-item">
@@ -63,12 +67,6 @@ function Skills() {
 
    <div class="skills-container"><Drawing2 /></div>
    
-  
-   <div class="skills-container">
-    
-  <h2>Skills</h2>
-  <p>The flow of learning never ends.</p>
-</div>
 
 {showOverlay && (
         <Overlay onClose={handleClose}>

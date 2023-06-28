@@ -166,3 +166,12 @@
 
 
 
+@media (max-width: 600px) {
+
+  .menu-items2{
+    font-size: 20px;
+  }
+  .menu-items{
+    font-size: 40px;
+  }
+}

@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Drawing1 from '../components/Drawing1';
 
 //home.css
-
 import '../styles/home.css';
-import ProfilePicture from '../components/ProfilePicture';
 
 function Home({ setPage }) {
   const [showContent, setShowContent] = useState(false);
