@@ -1,16 +1,20 @@
+import React from 'react';
+import ProjectBox from '../components/ProjectBox';
+import '../styles/projects.css';
+
 function Projects() {
   return (
-      <div className="about-page">
-        {/*Temp*/}
-        <h1>Working on it</h1>
-        <div className="container-about">
-          <div className="text-about"> Projects</div>
-        </div>
+    <div className="project-page">
+      <div className="project-image"></div>
+
+      <div className="container-about">
+      <ProjectBox text="auto iclicker" />
+      <ProjectBox text="ransomware demo" />
+      <ProjectBox text="simple game" />
+      <ProjectBox text="more..." />
       </div>
-    );
-  }
+    </div>
+  );
+}
+
 export default Projects;
-
-
-
-

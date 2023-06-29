@@ -11,9 +11,6 @@ import LogoPicture from './components/Logo';
 import './styles/App.css';
 //Under Everything Else
 function App() {
-
-
-
   
   return (
     <Router>
