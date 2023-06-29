@@ -1,2 +1,2 @@
-This is my website portfolio ! 
-Thanks for checking it out !
+This is the code for my website portfolio. 
+www.ishikawa.one
