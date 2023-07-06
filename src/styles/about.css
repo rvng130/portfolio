@@ -7,14 +7,6 @@
     background-color: #ffffff
   }
 
-.container-about {
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
 .text-about {
   font-weight: 100;
   font-size: 28px;
@@ -23,4 +15,64 @@
 
 .dud-about {
   color: #757575;
+}
+
+.container-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  margin-top: 40px;
+}
+
+.about-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*cpu image*/
+
+.container-cpu {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Align the content to the bottom */
+  height: 50vh; /* Adjust the height as needed */
+  margin-top: 200px; /* Add margin to create space between the image and the bottom of the page */
+}
+
+.cpu-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+/*text for this */
+
+
+
+/* resume link */
+.resume-link {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.resume-link a {
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.drawing-attribution {
+  font-size: 11px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-bottom: 30px;
+  color: #999999;
 }

@@ -10,16 +10,16 @@ function Skills() {
   const [showOverlay, setShowOverlay] = useState(false);
   const [selectedItem, setSelectedItem] = useState('');
   const [itemDetails, setItemDetails] = useState({
-    '08 Relevant Classes': `This skill page is all of the related programming knowledge that I have acquired so far into my computer science career.
+    '08 Relevant Classes': `This skill page is all of the related programming knowledge that I have acquired so far into my computer science career. 
      Some of these were learned as early as my second year of high-school. 
-     This specific page lists all of the computer science related courses that I have taken so far. 
-
-    Data Structures and Algorithms (Java and Python) [CSE2050]
-    Object Oriented Design [CSE2050] 
-    Discrete Systems
-    Linear Algebra 
-    Computer Architecture 
-    Systems Programming
+     This specific page lists all of the computer science related courses that I have taken so far. \n
+\n
+    Data Structures and Algorithms (Java and Python) [CSE2050] \n
+    Object Oriented Design [CSE2050] \n
+    Discrete Systems\n
+    Linear Algebra \n
+    Computer Architecture \n
+    Systems Programming \n
     Intro to Cybersecurity 
     Algorithms and complexity(3500)`,
 

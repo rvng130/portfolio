@@ -114,25 +114,30 @@
 
 .selected-item-container {
   position: relative;
-  top: 10%;
-  width:50%;
-  max-width: 450px;
+  top: 5%;
+  width: 50%; /* Adjust the width as desired */
+  max-width: 600px; /* Increase the max-width as needed */
+  margin: 0 auto; /* Center the container horizontally */
   background-image: url("../images/backpack.png");
+  background-position: center;
   background-size: contain;
-  padding: 100px;
-
+  padding: 50px; /* Adjust the padding as needed */
   text-align: center;
   background-repeat: no-repeat; /* Prevents image duplication */
+  max-height: 400px; /* Set the maximum height for the container */
+/* Add scrollbars if the content exceeds the container height */
 }
 
 .selected-item-container h2 {
-  font-size: 20px;
+  font-size: 24px; /* Increase the font size as desired */
   margin: 0 0 10px;
+  overflow-wrap: break-word; /* Allow long words to break */
 }
 
 .selected-item-container p {
-  font-size: 16px;
+  font-size: 18px; /* Increase the font size as desired */
   margin: 0;
+  overflow-wrap: break-word; /* Allow long words to break */
 }
 /*image*/
 .skills-container2 {

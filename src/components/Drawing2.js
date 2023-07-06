@@ -1,5 +1,5 @@
 import React from 'react';
-import skillsImage from '../images/skills.png';
+import skillsImage from '../images/cpu.png';
 
 const Drawing2 = () => {
   return (

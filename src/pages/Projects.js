@@ -7,12 +7,13 @@ function Projects() {
     <div className="project-page">
       <div className="project-image"></div>
 
-      <div className="container-about">
+      <div className="container-projects">
       <ProjectBox text="auto iclicker" />
       <ProjectBox text="ransomware demo" />
       <ProjectBox text="simple game" />
       <ProjectBox text="more..." />
       </div>
+
     </div>
   );
 }
